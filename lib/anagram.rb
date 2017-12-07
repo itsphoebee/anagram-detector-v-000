@@ -6,9 +6,9 @@ def initialize(word)
   @word = word
 end
 
-def match(%w(array_of_words))
+def match(array_of_words)
   array_of_words.select {|word|
-    word.chars.to_a.sort == @word.chars.to_a.sort
+    word.scan.sort == @word.scan.sort
   }
 end
 
